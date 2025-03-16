@@ -3,32 +3,20 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public InputAction MoveAction;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        MoveAction.Enable();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float horizontal = 0.0f;
+        Vector2 move = MoveAction.ReadValue<Vector2>();
+        Debug.Log(move);
+        Vector2 position = (Vector2)transform.position + move * 3.0f * Time.deltaTime;
+        transform.position = position; 
 
-        if (Keyboard.current.leftArrowKey.isPressed) {
-            horizontal = -1.0f;
-        }
-        else if (Keyboard.current.rightArrowKey.isPressed) {
-            horizontal = 1.0f;
-        }
-
-        Debug.Log(horizontal);
-
-
-
-      Vector2 position = transform.position;
-      position.x = position.x + 0.1f * speed;;  
-      position.y = position.y + 0.1f * speed;
-      transform.position = position;
     }
 }
