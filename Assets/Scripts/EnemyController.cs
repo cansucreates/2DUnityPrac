@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -44,5 +45,14 @@ public class EnemyController : MonoBehaviour
         }
 
         rb.MovePosition(position);
+    }
+
+    void OnTriggerEnter2D (Collider2D other)
+    {
+        PlayerController player = other.gameObject.GetComponent<PlayerController>();
+
+        if (player != null) {
+            player.ChangeHealth(-1);
+        }
     }
 }
