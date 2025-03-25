@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject projectilePrefab;
     Animator animator;
     Vector2 moveDirection = new Vector2(1, 0); // when the char is still, both movex and move y will be 0, so
 
@@ -59,6 +60,12 @@ public class PlayerController : MonoBehaviour
                 isInvincible = false;
             }
         }
+
+        // projectile shooting 
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Launch();
+        }
     }
 
     void FixedUpdate()
@@ -82,5 +89,15 @@ public class PlayerController : MonoBehaviour
         }
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
+    }
+
+    // projectile shooting
+    void Launch() {
+        // create a new projectile and set the direction and force
+        GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
+        Projectile projectile = projectileObject.GetComponent<Projectile>();
+        projectile.Launch(moveDirection, 300);
+        animator.SetTrigger("Launch");
+
     }
 }
