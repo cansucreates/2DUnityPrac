@@ -11,13 +11,30 @@ public class Projectile : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
-    public void Launch(Vector2 direction, float force) {
+    void Update()
+    {
+        GameObject player = GameObject.FindWithTag("Player");
+        if (
+            player != null
+            && Vector2.Distance(transform.position, player.transform.position) > 50.0f
+        )
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void Launch(Vector2 direction, float force)
+    {
         rigidbody2d.AddForce(direction * force);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Projectile collided with: " + other.gameObject);
+        EnemyController enemy = other.GetComponent<EnemyController>();
+        if (enemy != null)
+        {
+            enemy.Fix();
+        }
         Destroy(gameObject);
     }
 }

@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    bool broken = true;
     Animator animator;
     public float speed = 1.0f;
     Rigidbody2D rb;
@@ -35,6 +36,12 @@ public class EnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
+        // check if the enemy is broken
+        if (!broken)
+        {
+            return;
+        }
+        // move the enemy
         Vector2 position = rb.position;
 
         if (vertical)
@@ -57,12 +64,26 @@ public class EnemyController : MonoBehaviour
         rb.MovePosition(position);
     }
 
-    void OnTriggerEnter2D (Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         PlayerController player = other.gameObject.GetComponent<PlayerController>();
 
-        if (player != null) {
+        if (player != null)
+        {
             player.ChangeHealth(-1);
         }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+    }
+
+    // method to fix the enemy
+    public void Fix()
+    {
+        broken = false;
+        rb.simulated = false; // remove enemy from physics simulation
+        animator.SetTrigger("Fixed");
     }
 }
