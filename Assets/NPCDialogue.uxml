@@ -1,0 +1,5 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="Background" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/Ruby/UI/UIDialogueBox.png?fileID=21300000&amp;guid=c4592e9bd029fcc45843314f2192f59e&amp;type=3#UIDialogueBox&quot;);">
+        <engine:Label text="Hey! Help me fix all those robots!" name="Label" selectable="true" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 35px; padding-right: 35px; padding-bottom: 35px; padding-left: 35px; color: rgb(81, 255, 0); font-size: 20px; white-space: normal; -unity-font-style: bold;" />
+    </engine:VisualElement>
+</engine:UXML>

@@ -297,6 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3ca2c34c275f148bff51e411223307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayTime: 4
 --- !u!1001 &692869958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8279,11 +8280,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1400975333298618681, guid: 3166f2e1ab377964aa9523edaf10db23, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.47
+      value: 5.82
       objectReference: {fileID: 0}
     - target: {fileID: 1400975333298618681, guid: 3166f2e1ab377964aa9523edaf10db23, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.56
+      value: 8.07
       objectReference: {fileID: 0}
     - target: {fileID: 1400975333298618681, guid: 3166f2e1ab377964aa9523edaf10db23, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8505,34 +8506,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 905215415885976939, guid: d1c7a152577a7914d83d616674b49168, type: 3}
-      propertyPath: talkAction.m_Name
-      value: Talk
-      objectReference: {fileID: 0}
-    - target: {fileID: 905215415885976939, guid: d1c7a152577a7914d83d616674b49168, type: 3}
-      propertyPath: talkAction.m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 905215415885976939, guid: d1c7a152577a7914d83d616674b49168, type: 3}
-      propertyPath: talkAction.m_ExpectedControlType
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 905215415885976939, guid: d1c7a152577a7914d83d616674b49168, type: 3}
-      propertyPath: talkAction.m_SingletonActionBindings.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 905215415885976939, guid: d1c7a152577a7914d83d616674b49168, type: 3}
-      propertyPath: talkAction.m_SingletonActionBindings.Array.data[0].m_Id
-      value: 089f1c52-5c6f-4b39-a30e-33dc00fe242b
-      objectReference: {fileID: 0}
-    - target: {fileID: 905215415885976939, guid: d1c7a152577a7914d83d616674b49168, type: 3}
-      propertyPath: talkAction.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Keyboard>/x
-      objectReference: {fileID: 0}
-    - target: {fileID: 905215415885976939, guid: d1c7a152577a7914d83d616674b49168, type: 3}
-      propertyPath: talkAction.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Talk
-      objectReference: {fileID: 0}
     - target: {fileID: 4529955931543590320, guid: d1c7a152577a7914d83d616674b49168, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.33
@@ -8576,10 +8549,6 @@ PrefabInstance:
     - target: {fileID: 6270376307271400617, guid: d1c7a152577a7914d83d616674b49168, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270376307271400617, guid: d1c7a152577a7914d83d616674b49168, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

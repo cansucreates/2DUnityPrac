@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5827795780822958246}
   - component: {fileID: 2489391144326055407}
   - component: {fileID: 2582442688298738973}
+  - component: {fileID: 4592844394086421243}
   m_Layer: 9
   m_Name: NPC
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.47, y: 3.56, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8271, y: 2.0168, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -157,3 +158,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.79000556, y: 0.5963447}
   m_EdgeRadius: 0
+--- !u!114 &4592844394086421243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4684075725309668829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f5d0e5e116ab34c9bed9f9b72867c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

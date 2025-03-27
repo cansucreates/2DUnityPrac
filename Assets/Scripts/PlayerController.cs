@@ -125,7 +125,11 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider != null)
         {
-            Debug.Log("Raycast has hit the object " + hit.collider.gameObject);
+            NonCharacterPlayer character = hit.collider.GetComponent<NonCharacterPlayer>();
+            if (character != null)
+            {
+                UIHandler.instance.DisplayDialogue();
+            }
         }
     }
 }
