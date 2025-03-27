@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 711246108582215722}
   m_Layer: 6
   m_Name: PlayerCharacter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,6 +103,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1266ecb2b4aacc6409b00091560d6f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  talkAction:
+    m_Name: Talk
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: cbabd655-079e-44f4-9149-8a852c54d911
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 089f1c52-5c6f-4b39-a30e-33dc00fe242b
+      m_Path: <Keyboard>/x
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Talk
+      m_Flags: 0
+    m_Flags: 0
   projectilePrefab: {fileID: 3902827489793894617, guid: 2a47113c030f81142bbecaad3b201b7b, type: 3}
   MoveAction:
     m_Name: Move
