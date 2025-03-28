@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    AudioSource audioSource;
     public InputAction talkAction; // for npc talk
     public GameObject projectilePrefab;
     Animator animator;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         talkAction.Enable();
         animator = GetComponent<Animator>();
         MoveAction.Enable();
@@ -131,5 +133,10 @@ public class PlayerController : MonoBehaviour
                 UIHandler.instance.DisplayDialogue();
             }
         }
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 }

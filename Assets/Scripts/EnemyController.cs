@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    AudioSource audioSource;
     bool broken = true;
     Animator animator;
     public float speed = 1.0f;
@@ -17,6 +18,7 @@ public class EnemyController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         timer = changeTime;
         animator = GetComponent<Animator>();
@@ -85,5 +87,6 @@ public class EnemyController : MonoBehaviour
         broken = false;
         rb.simulated = false; // remove enemy from physics simulation
         animator.SetTrigger("Fixed");
+        audioSource.Stop();
     }
 }
