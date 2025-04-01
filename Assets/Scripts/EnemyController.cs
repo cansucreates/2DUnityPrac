@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public ParticleSystem smokeEffect;
     AudioSource audioSource;
     bool broken = true;
     Animator animator;
@@ -88,5 +89,6 @@ public class EnemyController : MonoBehaviour
         rb.simulated = false; // remove enemy from physics simulation
         animator.SetTrigger("Fixed");
         audioSource.Stop();
+        smokeEffect.Stop(); // stop the smoke effect
     }
 }
